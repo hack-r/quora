@@ -30,11 +30,12 @@ plot(density(stack$is_duplicate),xlim=c(.2,.55))
 lines(density(mod_stack$is_duplicate),xlim=c(.2,.55),col="green")
 
 stack$is_duplicate[ stack$is_duplicate > .3] <- 
-  stack$is_duplicate[stack$is_duplicate > .3] * .99 +
-  mod_stack$is_duplicate[stack$is_duplicate > .3] * .01
+  stack$is_duplicate[stack$is_duplicate > .3] * .98 +
+  mod_stack$is_duplicate[stack$is_duplicate > .3] * .02
 
-fwrite(stack, "crazy9.csv") 
+fwrite(stack, "crazy10.csv") 
 
+# crazy9 LB: 0.15820
 # crazy6 LB: 0.15821
 # crazy4 LB: 0.15822
 # crazy7 LB: 0.15832
